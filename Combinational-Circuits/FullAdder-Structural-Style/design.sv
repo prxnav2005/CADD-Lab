@@ -3,11 +3,9 @@ module full_adder(
     output logic Sum, Cout
 );
 
-    logic AxorB;
     logic AB, BCin, ACin;
 
-    xor (AxorB, A, B);
-    xor (Sum, AxorB, Cin);
+    xor (Sum, A, B, Cin);
 
     and (AB, A, B);
     and (BCin, B, Cin);
